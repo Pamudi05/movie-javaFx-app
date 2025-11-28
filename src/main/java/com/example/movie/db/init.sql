@@ -1,0 +1,48 @@
+CREATE DATABASE IF NOT EXISTS movie;
+USE movie;
+
+CREATE TABLE IF NOT EXISTS users(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phoneNumber VARCHAR(255),
+    password VARCHAR(255) NOT NULL,
+    role ENUM('ADMIN', 'CUSTOMER') NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS categories(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS movies(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    year INT,
+    price DECIMAL(10,2),
+    qty INT NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+
+    FOREIGN KEY(category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE IF NOT EXISTS orders(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    total DECIMAL(10,2),
+
+    FOREIGN KEY(user_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS order_items(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    movie_id INT NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(10,2),
+
+    FOREIGN KEY(order_id) REFERENCES orders(id),
+    FOREIGN KEY(movie_id) REFERENCES movies(id)
+);

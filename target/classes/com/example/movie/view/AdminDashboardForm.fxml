@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="adminsidebar" prefHeight="432.0" prefWidth="200.0" stylesheets="@styles/main.css">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="14.0" layoutY="393.0" pickOnBounds="true">
+               <image>
+                  <Image url="@images/logout.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="26.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Library App">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Separator layoutX="14.0" layoutY="47.0" prefHeight="6.0" prefWidth="169.0" />
+            <Button id="adminbtn" layoutX="13.0" layoutY="89.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" stylesheets="@styles/main.css" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button id="adminbtn" layoutX="13.0" layoutY="130.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" stylesheets="@styles/main.css" text="Movies">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button id="adminbtn" layoutX="13.0" layoutY="171.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" stylesheets="@styles/main.css" text="Order" />
+            <Button id="adminbtn" layoutX="13.0" layoutY="216.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" stylesheets="@styles/main.css" text="Customer">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="admintopbar" layoutX="200.0" prefHeight="45.0" prefWidth="570.0" stylesheets="@styles/main.css">
+         <children>
+            <Text fill="WHITE" layoutX="249.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/11/2025 | 11.52 AM">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="31.0" fitWidth="43.0" layoutX="436.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/person.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="475.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pamudi Niwarthana" wrappingWidth="74.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

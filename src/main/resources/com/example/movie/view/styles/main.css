@@ -1,0 +1,41 @@
+#emailtxt{
+   -fx-background-radius: 15;
+   -fx-border-radius: 15;
+   -fx-background-color:#D9D9D9 ;
+   -fx-text-fill: #908989;
+
+}
+
+#loginbtn{
+    -fx-background-color:#191818 ;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+#adminsidebar{
+    -fx-background-color: linear-gradient(to bottom, #251D3C, #654FA2);
+
+}
+
+#admintopbar{
+    -fx-background-color: linear-gradient(to right, #251D3C, #654FA2);
+}
+
+#adminbtn{
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-background-color: #8266F2;
+}
+
+#clientsidebar{
+     -fx-background-color: linear-gradient(to bottom, #000000, #666666);
+}
+
+#clientopbar{
+    -fx-background-color: linear-gradient(to right, #000000, #666666);
+}
+
+#clientbtn{
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}

@@ -3,5 +3,8 @@ module com.example.movie {
     requires javafx.fxml;
 
     opens com.example.movie to javafx.fxml;
+    opens com.example.movie.controller to javafx.fxml;
+
     exports com.example.movie;
+    exports com.example.movie.controller;
 }
